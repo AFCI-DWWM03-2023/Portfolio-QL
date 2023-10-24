@@ -117,6 +117,10 @@ body {
 }
 .fenetre {
   position: absolute;
+  top: 20%;
+  left: calc(50% - 200px);
+  height: 400px;
+  width: 400px;
   background-color: var(--color-gray);
   border-top: solid 2px white;
   border-left: solid 2px white;
@@ -155,8 +159,7 @@ body {
   border-right: solid 2px white;
 }
 .f1 {
-  height: 400px;
-  width: 400px;
+  display: none;
 }
 .f1ongletcontainer {
   display: flex;
@@ -220,6 +223,7 @@ body {
 .subf1 .content {
   width: 50%;
   padding-top: 24px;
+  margin-right: 20px;
 }
 .subf1 .content .content2,
 .subf1 .content .content3 {
@@ -233,9 +237,14 @@ body {
   position: relative;
   margin-right: 5px;
   margin-left: auto;
+  bottom: 2px;
+  width: fit-content;
+  cursor: default;
   display: block;
   padding: 2px 4px;
   background-color: var(--color-gray);
+  color: black;
+  text-decoration: none;
   border-top: solid 2px white;
   border-left: solid 2px white;
   border-bottom: solid 2px gray;
@@ -246,6 +255,29 @@ body {
   border-left: solid 2px gray;
   border-bottom: solid 2px white;
   border-right: solid 2px white;
+}
+.f2 {
+  display: none;
+}
+.subf2 {
+  display: flex;
+  height: calc(100% - 24px - 10px);
+  width: calc(100% - 4px);
+  margin: 5px 2px;
+  background-color: white;
+  border: solid gray 2px;
+}
+.f3header {
+  text-align: center;
+  background-color: white;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 10px 0;
+}
+.f3gradient {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to left, var(--color-darkblue), #A6CAF0, var(--color-darkblue));
 }
 footer {
   background-color: var(--color-gray);
@@ -364,6 +396,18 @@ footer div .langue {
   }
   .onglet:nth-of-type(3) {
     display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .f1 {
+    width: 100%;
+    left: 0;
+  }
+  .f1onglet {
+    font-size: 13px;
+  }
+  .subf1 .preview img {
+    max-width: 96px;
   }
 }
 @media screen and (max-width: 360px) {
